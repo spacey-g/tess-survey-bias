@@ -89,4 +89,18 @@ demonstrating increased variance in regions of low confirmation efficiency.
 
 ---
 
-## Repository Structure
+---
+
+## Reproducibility
+- All figures are generated from notebooks in this repository
+- No raw survey data are committed
+- Statistical assumptions and limitations are explicitly documented
+
+---
+
+## Scientific Relevance
+This project demonstrates survey-level reasoning, statistical rigor, and
+bias-aware interpretation of exoplanet catalogs. The methodology is directly
+applicable to other transit missions such as **Kepler**, **PLATO**, and **Roman**,
+and forms a strong foundation for exoplanet occurrence rate studies.
+
