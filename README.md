@@ -1,92 +1,92 @@
 # Quantifying Detection Biases in the TESS Exoplanet Survey
 
 ## Overview
-Transit surveys such as **TESS** do not provide an unbiased view of the exoplanet population.
-Detection and confirmation probabilities depend on planet radius, orbital period, and
-limitations in follow-up observations. This project quantifies those selection effects
-using publicly available catalogs.
+Transit surveys such as **TESS** do not provide an unbiased view of the underlying
+exoplanet population. Detection and confirmation probabilities depend strongly on
+planet radius, orbital period, and limitations in follow-up observations.
 
-This analysis is fully reproducible and uses programmatic access to the NASA Exoplanet
-Archive.
+This project presents a **reproducible statistical analysis of selection effects**
+in the TESS exoplanet survey by comparing detected planet candidates with confirmed
+planets and quantifying confirmation efficiency across parameter space.
+
+The goal is to understand **which types of planets TESS preferentially confirms**
+and how the observed population differs from the true underlying distribution.
 
 ---
 
 ## Data Sources
-- **NASA Exoplanet Archive** confirmed planets
+- **NASA Exoplanet Archive** (confirmed exoplanets)
 - **TESS Objects of Interest (TOI)** catalog
 - TESS Input Catalog (via Exoplanet Archive)
 
-Raw catalog data are *not* stored in this repository. They are obtained dynamically
-during notebook execution.
+Raw catalog data are **not stored in the repository** and are accessed dynamically
+to ensure full reproducibility.
 
 ---
 
 ## Key Figures
 
 ### 1) TESS Candidates vs Confirmed Planets
+Comparison of detected planet candidates and confirmed planets in
+period–radius space, illustrating strong confirmation bias.
 
-Shows detected candidates (blue) vs confirmed planets (orange) in period–radius space.
-
-![Candidates vs Confirmed](docs/figures/candidates_vs_confirmed.png)
+![Candidates vs Confirmed](docs/candidates_vs_confirmed.png)
 
 ---
 
 ### 2) Confirmation Efficiency vs Planet Radius
+Confirmation efficiency as a function of planet radius, highlighting reduced
+efficiency for small and very large planets.
 
-Confirmation efficiency as a function of planet radius reveals systematic
-bias against small and very large planets.
-
-![Efficiency vs Radius](docs/figures/efficiency_vs_radius.png)
+![Efficiency vs Radius](docs/efficiency_vs_radius.png)
 
 ---
 
 ### 3) Confirmation Efficiency vs Orbital Period
+Efficiency as a function of orbital period, reflecting false-positive rates at
+short periods and limited transit sampling at long periods.
 
-Shows how efficiency varies with orbital period, reflecting false-positive
-rates at short periods and fewer transits at long periods.
-
-![Efficiency vs Period](docs/figures/efficiency_vs_period.png)
-
----
-
-### 4) Observed vs Bias-Corrected Radius Distribution
-
-Correcting for confirmation bias reveals an enhanced population of small planets
-compared to the confirmed sample.
-
-![Observed vs Corrected](docs/figures/observed_vs_corrected_radius.png)
+![Efficiency vs Period](docs/efficiency_vs_period.png)
 
 ---
 
-### 5) 2D Confirmation Efficiency Map
+### 4) Observed vs Bias-Corrected Planet Radius Distribution
+Bias correction reveals a substantially enhanced population of small planets
+relative to the confirmed sample.
 
-A heatmap of confirmation efficiency across period–radius space. Regions with sparse
-data are masked to avoid overinterpretation.
-
-![Completeness Map](docs/figures/completeness_map.png)
+![Observed vs Corrected](docs/observed_vs_corrected_radius.png)
 
 ---
 
-## Additional Supporting Figure
+### 5) Two-Dimensional Confirmation Efficiency Map
+A two-dimensional map of confirmation efficiency in period–radius space.
+Sparse regions are conservatively masked to avoid over-interpretation.
+
+![Completeness Map](docs/completeness_map.png)
+
+---
+
+## Supporting Analysis
 
 ### Bias-Corrected Radius Distribution with Uncertainty
+Propagation of binomial uncertainties into the bias-corrected planet counts,
+demonstrating increased variance in regions of low confirmation efficiency.
 
-Shows propagated binomial uncertainties in the corrected planet counts.
-
-![Bias Corrected with Uncertainty](docs/figures/bias_corrected_radius_uncertainty.png)
+![Bias Corrected with Uncertainty](docs/bias_corrected_radius_uncertainty.png)
 
 ---
 
 ## Methodology Summary
-
-1. Ingest confirmed and candidate exoplanet catalogs.
-2. Compare confirmed planets and TOI candidates in period–radius space.
-3. Compute confirmation efficiency as a function of planet radius and orbital period.
-4. Propagate binomial uncertainties into efficiency estimates.
-5. Build a 2D completeness map in period–radius space.
-6. Correct the observed distribution for confirmation bias.
+1. Ingest confirmed exoplanet and TOI catalogs programmatically
+2. Compare confirmed planets and candidates in period–radius space
+3. Define confirmation efficiency as the fraction of detected TOIs that are confirmed
+4. Quantify efficiency as a function of:
+   - Planet radius
+   - Orbital period
+5. Propagate binomial uncertainties into efficiency estimates
+6. Construct a two-dimensional completeness map
+7. Correct observed planet populations for confirmation bias
 
 ---
 
-
-
+## Repository Structure
