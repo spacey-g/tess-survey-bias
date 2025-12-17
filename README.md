@@ -1,6 +1,10 @@
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)]
 (https://colab.research.google.com/github/spacey-g/tess-survey-bias/blob/main/notebooks/01_catalog_ingestion.ipynb)
 
+
+
+
+
 # Quantifying Detection Biases in the TESS Exoplanet Survey
 
 ## Overview
@@ -14,6 +18,14 @@ planets and quantifying confirmation efficiency across parameter space.
 
 The goal is to understand **which types of planets TESS preferentially confirms**
 and how the observed population differs from the true underlying distribution.
+
+## Run the Analysis in Google Colab
+
+The main analysis notebook can be executed directly in Google Colab:
+
+👉 [Open `01_catalog_ingestion.ipynb` in Colab](https://colab.research.google.com/github/spacey-g/tess-survey-bias/blob/main/notebooks/01_catalog_ingestion.ipynb)
+
+All dependencies are installed within the notebook.
 
 ---
 
