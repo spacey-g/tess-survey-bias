@@ -1,3 +1,6 @@
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)]
+(https://colab.research.google.com/github/spacey-g/tess-survey-bias/blob/main/notebooks/01_catalog_ingestion.ipynb)
+
 # Quantifying Detection Biases in the TESS Exoplanet Survey
 
 ## Overview
