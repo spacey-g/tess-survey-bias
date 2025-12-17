@@ -119,3 +119,18 @@ bias-aware interpretation of exoplanet catalogs. The methodology is directly
 applicable to other transit missions such as **Kepler**, **PLATO**, and **Roman**,
 and forms a strong foundation for exoplanet occurrence rate studies.
 
+## Cite This Repository
+
+If you use this code, methodology, or figures in your research, please cite this repository.
+
+```bibtex
+@software{tess_survey_bias,
+  author       = {Grace},
+  title        = {Quantifying Detection Biases in the TESS Exoplanet Survey},
+  year         = {2025},
+  url          = {https://github.com/spacey-g/tess-survey-bias},
+  note         = {GitHub repository}
+}
+
+
+
